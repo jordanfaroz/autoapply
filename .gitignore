@@ -32,10 +32,17 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
 
+# autoapply runtime state — SQLite DB, uploaded resumes, failure screenshots,
+# and the Playwright persistent browser profile (contains real logged-in sessions).
+# Never commit any of this.
+/data/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+dev.log
